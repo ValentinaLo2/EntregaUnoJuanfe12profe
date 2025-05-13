@@ -32,17 +32,25 @@ print("3. Modificar una tarea")
 print("4. Eliminar una tarea")
 print("5. SALIR")
 
-
+ListaTarea=[]
 while opcion != 5:
+    tarea={} 
     opcion=int(input("Digita una opcion por favor: "))
     if opcion == 1:
-        pass
+        tarea['id'] = input("Digita el id de la tarea:  ")
+        tarea['descripcion'] = input("Digita una descripción:  ")
+        tarea['diaSemana'] = input("Digita el dia de la semana:  ")
+        tarea['Hora'] = input("a que hora es esta tarea?:  ")
+        tarea['Fecha'] = input("cual es la fecha de la tarea (AAAA-mm-dd)")
+        ListaTarea.append(tarea)
+        print("Creando una tarea...")
     elif opcion == 2:
-        pass
+        print("Consultando las tareas...")
+        print(ListaTarea)
     elif opcion == 3:
-        pass 
+        print("Modificando una tarea...")
     elif opcion == 4:
-        pass
+        print("Eliminar una tarea.....")
     elif opcion == 5:
         print("saliendo")
         break
